@@ -25,7 +25,7 @@ class DC_Chapter_Spider(scrapy.Spider):
     crs_title_ext = crs_title.extract_first().strip()
     ch_titles = response.css('h4.chapter__title::text')
     ch_titles_ext = [t.strip() for t in ch_titles.extract()]
-    dc_dict[ crs_title_ext ] = ____
+    dc_dict[ crs_title_ext ] = ch_titles_ext
 
 # Initialize the dictionary **outside** of the Spider class
 dc_dict = dict()
